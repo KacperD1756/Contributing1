@@ -3,23 +3,24 @@
 ## Setup
 
 ```bash
-# Create virtual env
-python3 -m venv .venv
-source .venv/bin/activate
+### Clone repository
+direct link - **https://github.com/knmlprz/ChatKNML.git**
 
-# Install packages
-pip install -r requirements.txt
+### Install docker compose
+direct link - **https://docs.docker.com/desktop/install/windows-install/**
 
-# Create env variables
-touch .env
+### After docker has been installed, make sure to register and log in to docker desktop.
 
-# Insert Bot token here
-echo "[BOT TOKEN]" > .env
+### Install poetry and packs needed
+pip poetry install
+poetry install
 
-# Set variables
-source .env
-set -a
+### Copy insides of ".env.example", create ".env" file, paste it there and put your own discord token in parenthesis
+TOKEN="DISCORD_TOKEN"
 
-# Run a bot!
-python3 Bot.py
+### Setting docker compose
+docker compose up
+
+### Run a bot!
+from "/discord_bot/discord_bot" path run bot.py
 ```
